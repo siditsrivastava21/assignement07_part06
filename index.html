@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Different Input Types</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #555;
+      }
+
+
+      .input {
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Sample Form</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input
+          class="input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          class="input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          class="input"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+
+        <label for="dob">Date of Birth:</label>
+        <input class="input" type="date" id="dob" name="dob" />
+
+        <label for="favcolor">Favorite Color:</label>
+        <input class="input" type="color" id="favcolor" name="favcolor" />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          class="input"
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+        />
+
+        <label for="range">Select Range (0-100):</label>
+        <input
+          class="input"
+          type="range"
+          id="range"
+          name="range"
+          min="0"
+          max="100"
+        />
+
+        <label for="file">Upload File:</label>
+        <input class="input" type="file" id="file" name="file" />
+
+        <label for="gender">Gender:</label>
+        <select class="input" id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea
+          class="input"
+          id="comments"
+          name="comments"
+          rows="4"
+          placeholder="Your comments here"
+        ></textarea>
+
+        <input class="input" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
